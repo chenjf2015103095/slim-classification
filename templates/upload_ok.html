@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试版web服务</title>
+</head>
+<body>
+    <h1>AI证件识别</h1>
+    <form action="infer" method=post enctype=multipart/form-data>
+      <p><input type=file name=file value='选择图片'>
+         <input type=submit value='上传'>
+    </form>
+    <h1>识别结果：{{userinput}}</h1>
+    <img src="{{ url_for('static', filename= 'images/test.jpg') }}" width="400" height="400" alt="你的图片被外星人劫持了～～"/>
+</body>
+</html>
